@@ -1,0 +1,13 @@
+.text-center{
+    width: 200px;
+    border: 15px solid rgb(200, 212, 200);
+    padding: 50px;
+    margin: 20px;
+}
+.d-flex justify-content-center{
+    width: 200px;
+    border: 15px solid rgb(200, 212, 200);
+    padding: 50px;
+    margin: 20px;
+
+}
