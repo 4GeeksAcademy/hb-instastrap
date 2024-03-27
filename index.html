@@ -1,69 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Feed</title>
+  
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+ 
   <script src="https://kit.fontawesome.com/5d93d277e4.js" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Custom CSS -->
+  <style>
+    .wrapper {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card {
+      width: 18rem;
+    }
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+  .modal-footer{
+    justify-content: space-between;
+  }
 
+  .dropdown-divider{ 
+    color: #fc1616;}
 
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title></title>
+.dropdown-item{
+  text-decoration-color: #fc1616;
+}
+
+  </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-    <i class="fa-brands fa-instagram fa-lg" style="color: #f7f7f8;"></i>
+    <i class="fa-brands fa-instagram fa-lg"></i>
     <a class="navbar-brand" href="#">Instagram</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <ul class="nav nav-pills">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Create a new post</a>
-      </li>
-      <div class="btn-group">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-gear fa-sm" style="color: #edeff2;"></i>
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item" href="#">Profile</a></li>
-          <li><a class="dropdown-item" href="#">Accessibility</a></li>
-          <li><a class="dropdown-item" href="#">Profile and Data</a></li>
-          <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="#">Log Out</a></li>
-        </ul>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      Create A New Post
+    </button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Create A New Post</h1>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <weak>Add the caption of your post here</weak>
+          </div>
+
+          
+          <div class="modal-footer">
+            <div class="icons">
+              <i class="fa-solid fa-camera fa-lg"></i>
+              <i class="fa-solid fa-location-dot fa-lg"></i>
+            </div>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Publish</button>
+          </div>
+        </div>
       </div>
+    </div>
+      
+    <div class="btn-group">
+      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa-solid fa-gear fa-sm" style="color: #edeff2;"></i>
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a class="dropdown-item" href="#">Profile</a>
+        <a class="dropdown-item" href="#">Accessibility</a>
+        <a class="dropdown-item" href="#">Profile and Data</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Log Out</a>
+      </div>
+    </div>
   </div>
 </nav>
-
-<div class="wrapper">
-    
-    <div class="d-grid gap-2 col-6 mx-auto">
-      <div class="mx-auto p-2" style="width: 200px;">   
-        <button class="btn btn-primary" type="button">Button</button>
-        <button class="btn btn-primary" type="button">Button</button>
-      </div>   
+<div class="mx-auto p-2" style="width: 200px;">
+<div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+  <button type="button" class="btn btn-outline-primary"><i class="fa-solid fa-table-cells"></i></button>
+  <button type="button" class="btn btn-outline-primary"><i class="fa-solid fa-square"></i></button>
+</div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="wrapper">
+        <div class="card">
+          <img src="https://th-thumbnailer.cdn-si-edu.com/bgmkh2ypz03IkiRR50I-UMaqUQc=/1000x750/filters:no_upscale():focal(1061x707:1062x708)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/55/95/55958815-3a8a-4032-ac7a-ff8c8ec8898a/gettyimages-1067956982.jpg" class="card-img-top rounded" alt="...">
+          <div class="card-body">
+            <p class="card-text">Queenie the kitty is feeling pretty today.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://hips.hearstapps.com/hmg-prod/images/cute-cat-photos-1593441022.jpg?crop=1.00xw:0.753xh;0,0.153xh&resize=1200:*" class="card-img-top rounded" alt="...">
+          <div class="card-body">
+            <p class="card-text">To nap is to do the very best activity in the world. Next is waking up to a nice bowl of milk.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://img.freepik.com/free-photo/ragdoll-cat-breed-vase-narcissus_2829-13958.jpg?size=626&ext=jpg" class="card-img-top rounded" alt="...">
+          <div class="card-body">
+            <p class="card-text">Mommy doesn't like it when I eat the flowers. But they're magically delicious!</p>
+          </div>
+        </div>
+      </div>
     </div>
-   <header>
-    <div class="title">
-      <h1>Breathe Code Photo Feed</h1>
-  </div>
-    </header> <!-- Your existing content goes here -->
-</div>
-<div class="d-flex justify-content-center">
-<div class="vstack gap-3">
-  <div class="text-center">
-    <img src="https://th-thumbnailer.cdn-si-edu.com/bgmkh2ypz03IkiRR50I-UMaqUQc=/1000x750/filters:no_upscale():focal(1061x707:1062x708)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/55/95/55958815-3a8a-4032-ac7a-ff8c8ec8898a/gettyimages-1067956982.jpg" class="rounded" alt="https://th-thumbnailer.cdn-si-edu.com/bgmkh2ypz03IkiRR50I-UMaqUQc=/1000x750/filters:no_upscale():focal(1061x707:1062x708)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/55/95/55958815-3a8a-4032-ac7a-ff8c8ec8898a/gettyimages-1067956982.jpg">
-  </div>
-  <div class="text-center">
-    <img src="https://hips.hearstapps.com/hmg-prod/images/cute-cat-photos-1593441022.jpg?crop=1.00xw:0.753xh;0,0.153xh&resize=1200:*" class="rounded" alt="https://hips.hearstapps.com/hmg-prod/images/cute-cat-photos-1593441022.jpg?crop=1.00xw:0.753xh;0,0.153xh&resize=1200:*">
-  </div>
-  <<div class="text-center">
-    <img src="https://img.freepik.com/free-photo/ragdoll-cat-breed-vase-narcissus_2829-13958.jpg?size=626&ext=jpg" class="rounded" alt="https://img.freepik.com/free-photo/ragdoll-cat-breed-vase-narcissus_2829-13958.jpg?size=626&ext=jpg">
   </div>
 </div>
+<div class="grid text-center">
+  <div class="g-col-4"><img src="https://www.pexels.com/photo/brown-tabby-cat-lying-on-white-floor-5427090/"></div>
+  <div class="g-col-4">.g-col-4</div>
+  <div class="g-col-4">.g-col-4</div>
 </div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
